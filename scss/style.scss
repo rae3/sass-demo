@@ -17,6 +17,25 @@ $base: #f00;
   -o-border-radius: $radius;
   border-radius: $radius;
 }
+// Extend
+.transition{
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+  -moz-transition: background-color .3s ease-in;
+  -webkit-transition: background-color .3s ease-in;
+  -o-transition: background-color .3s ease-in;
+  transition: background-color .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
 
 /* CSS Reset */
 html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -176,14 +195,7 @@ nav {
     margin-right: 5px;
     text-align: center;
     color: $colorsecondary;
-    -moz-border-radius: $radius;
-    -webkit-border-radius: $radius;
-    -o-border-radius: $radius;
-    border-radius: $radius;
-    -moz-transition: background-color .3s ease-in;
-    -webkit-transition: background-color .3s ease-in;
-    -o-transition: background-color .3s ease-in;
-    transition: background-color .3s ease-in;
+    @extend .transition;
   }
   ul li a:hover {
     background-color: #C2CF52;
@@ -213,10 +225,7 @@ nav {
     font-weight: bold;
     padding: 10px;
     color: white;
-    -moz-transition: all .3s ease-in;
-    -webkit-transition: all .3s ease-in;
-    -o-transition: all .3s ease-in;
-    transition: all .3s ease-in;
+    @extend .transition;
   }
   a:hover span.overlay {
     opacity: 1;
@@ -323,10 +332,7 @@ img { float: left; }
   -o-border-radius: 15px 15px 0 0;
   border-radius: 15px 15px 0 0;
   behavior: url(PIE.htc);
-  -moz-transition: all .3s ease-in;
-  -webkit-transition: all .3s ease-in;
-  -o-transition: all .3s ease-in;
-  transition: all .3s ease-in;
+@extend .transition;
 }
 #player_nav li.detail a { background-position: 0 -43px; }
 #player_nav li.video a { background-position: 0 -129px; }
